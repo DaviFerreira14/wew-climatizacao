@@ -19,7 +19,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 3px;
+  height: 4px;
   background: linear-gradient(90deg, #01aeee 0%, #2e3193 25%, #01aeee 50%, #2e3193 75%, #01aeee 100%);
   background-size: 200% 100%;
   animation: gradientShift 8s ease-in-out infinite;
@@ -80,8 +80,8 @@
 .nav-link {
   font-weight: 500;
   font-size: 1rem;
-  color: var(--cor-primaria) !important;
-  padding: 0.75rem 1.25rem !important;
+  color: #01aeee !important;
+  padding: 1rem 1.5rem !important;
   border-radius: 25px;
   transition: all 0.3s ease;
   position: relative;
@@ -103,10 +103,11 @@
 
 /* Efeito mais forte nos botões do navbar */
 .nav-link:hover {
-  color: var(--cor-branco) !important;
+  color: #01aeee !important;
   background: linear-gradient(135deg, var(--cor-secundaria), var(--cor-primaria));
-  box-shadow: 0 0 18px 6px rgba(1, 174, 238, 0.18), 0 4px 12px rgba(1, 174, 238, 0.25);
-  transform: translateY(-3px) scale(1.06);
+  box-shadow: 0 0 25px 8px rgba(1, 174, 238, 0.25), 0 6px 20px rgba(0, 187, 255, 0.35);
+  transform: translateY(-4px) scale(1.08);
+  font-weight: 600;
 }
 
 .nav-link:hover::before {
@@ -115,9 +116,11 @@
 }
 
 .nav-link.active {
-  color: var(--cor-branco) !important;
+  color: #01aeee !important;
   background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
-  box-shadow: 0 0 20px 8px rgba(46, 49, 147, 0.13), 0 4px 12px rgba(1, 174, 238, 0.22);
+  box-shadow: 0 0 25px 10px rgba(46, 49, 147, 0.2), 0 6px 20px rgba(1, 174, 238, 0.3);
+  transform: translateY(-2px) scale(1.05);
+  font-weight: 600;
 }
 
 .nav-link.active::before {
@@ -127,6 +130,7 @@
 .nav-link i {
   font-size: 0.9rem;
   opacity: 0.8;
+  color: #01aeee;
 }
 
 /* Mobile Styles */
