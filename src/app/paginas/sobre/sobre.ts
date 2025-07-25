@@ -4,7 +4,7 @@ import { Footer } from "../../componentes/footer/footer";
 
 @Component({
   selector: 'app-sobre',
-  imports: [Navbar, Footer],
+  imports: [Navbar],
   templateUrl: './sobre.html',
   styleUrl: './sobre.css'
 })

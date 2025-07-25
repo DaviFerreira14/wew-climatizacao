@@ -4,7 +4,7 @@ import { Footer } from "../../componentes/footer/footer";
 
 @Component({
   selector: 'app-servicos',
-  imports: [Navbar, Footer],
+  imports: [Navbar],
   templateUrl: './servicos.html',
   styleUrl: './servicos.css'
 })

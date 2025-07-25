@@ -1,10 +1,40 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
 
-body {
+/* Reset completo para garantir altura total */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   color: #2c3e50;
+}
+
+/* Estrutura principal com Flexbox */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Container principal que ocupa o espaço restante */
+.conteudo {
+  flex: 1 0 auto;
+  position: relative;
+  min-height: calc(100vh - 120px); /* Ajuste conforme altura do footer */
+}
+
+/* Footer sempre no final */
+app-footer {
+  flex-shrink: 0;
+  margin-top: auto;
 }
 
 html {
@@ -48,4 +78,29 @@ html {
   opacity: 1;
   transform: translateY(0);
   transition: all 0.3s ease;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #2bc262;
+  text-decoration: none;
+  color: white;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 1050;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  background-color: #128c4a;
+  text-decoration: none;
+  color: white;
 }

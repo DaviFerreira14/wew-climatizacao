@@ -1,2 +1,32 @@
 <app-navbar></app-navbar>
-<app-footer></app-footer>
+
+<div class="map-container">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7775.632956754356!2d-38.453599000000004!3d-12.983587!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7161b101be41e61%3A0x552a0ef14255a206!2sTrade%20Center%20Torre%20Sul%20-%20Av.%20Tancredo%20Neves%2C%201632%20-%20Caminho%20das%20%C3%81rvores%2C%20Salvador%20-%20BA%2C%2041820-020%2C%20Brasil!5e0!3m2!1spt-BR!2sus!4v1753473043712!5m2!1spt-BR!2sus"
+    width="100%"
+    height="400"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
+<div class="container py-4">
+  <h2 class="section-title mb-4">Fale conosco</h2>
+  <form class="form-contato" autocomplete="off">
+    <div class="mb-3">
+      <input type="text" class="form-control" placeholder="Nome" required>
+    </div>
+    <div class="mb-3">
+      <input type="email" class="form-control" placeholder="Email" required>
+    </div>
+    <div class="mb-3">
+      <input type="tel" class="form-control" placeholder="Telefone" required>
+    </div>
+    <div class="mb-3">
+      <textarea class="form-control" rows="4" placeholder="Mensagem" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-cta">Enviar Mensagem</button>
+  </form>
+</div>

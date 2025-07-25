@@ -1,17 +1,9 @@
 .footer {
-  background: #2555ad;
+  background: linear-gradient(135deg, #01aeee 0%, #2e3193 100%);
   color: #fff;
-  padding: 32px 0 16px 0;
+  padding: 16px 0 8px 0;
   text-align: center;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100vw;
-  z-index: 100;
-}
-
-body {
-  padding-bottom: 120px; /* Garante que o conteúdo não fique escondido atrás do footer */
+  width: 100%;
 }
 
 .footer-content {
