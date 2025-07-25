@@ -1,0 +1,25 @@
+:root {
+    --cor-primaria: #2e3193;
+    --cor-secundaria: #01aeee;
+    --cor-branco: #ffffff;
+  }
+  
+  body {
+    background-color: var(--cor-branco);
+    color: var(--cor-primaria);
+  }
+  
+  .navbar {
+    background-color: var(--cor-primaria);
+  }
+  
+  .nav-link, .navbar-brand {
+    color: var(--cor-branco) !important;
+  }
+  
+  .btn-personalizado {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-branco);
+    border: none;
+  }
+  
