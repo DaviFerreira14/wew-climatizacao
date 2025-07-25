@@ -1,0 +1,40 @@
+.footer {
+  background: #2555ad;
+  color: #fff;
+  padding: 32px 0 16px 0;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  z-index: 100;
+}
+
+body {
+  padding-bottom: 120px; /* Garante que o conteúdo não fique escondido atrás do footer */
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-logo {
+  height: 80px;
+  width: auto;
+  margin-bottom: 8px;
+}
+
+.footer-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 1.1rem;
+}
+
+.footer-dev {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
