@@ -12,21 +12,196 @@
   </iframe>
 </div>
 
-<div class="container py-4">
-  <h2 class="section-title mb-4">Fale conosco</h2>
-  <form class="form-contato" autocomplete="off">
-    <div class="mb-3">
-      <input type="text" class="form-control" placeholder="Nome" required>
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="contact-section">
+        <h2 class="section-title">Fale conosco</h2>
+        <p class="section-subtitle">Entre em contato e solicite seu orçamento sem compromisso</p>
+        
+        <!-- Formulário com Formspree -->
+        <form 
+          action="https://formspree.io/f/xqkqyqyq" 
+          method="POST" 
+          class="contact-form"
+          id="contactForm">
+          
+          <!-- Email de destino (oculto) -->
+          <input type="hidden" name="_to" value="davi073ferreira@gmail.com">
+          
+          <!-- Configurações do Formspree -->
+          <input type="hidden" name="_subject" value="Nova mensagem do site W&W Climatização">
+          <input type="hidden" name="_next" value="https://seusite.com/obrigado">
+          <input type="hidden" name="_language" value="pt">
+          
+          <!-- Proteção contra spam -->
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="_gotcha" style="display:none">
+          
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <div class="form-group">
+                <label for="nome" class="form-label">Nome completo</label>
+                <input 
+                  type="text" 
+                  id="nome" 
+                  name="nome"
+                  class="form-control"
+                  placeholder="Digite seu nome"
+                  required>
+                <div class="form-icon">
+                  <i class="fas fa-user"></i>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-6 mb-3">
+              <div class="form-group">
+                <label for="email" class="form-label">E-mail</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email"
+                  class="form-control"
+                  placeholder="Digite seu e-mail"
+                  required>
+                <div class="form-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-6 mb-3">
+              <div class="form-group">
+                <label for="telefone" class="form-label">Telefone</label>
+                <input 
+                  type="tel" 
+                  id="telefone" 
+                  name="telefone"
+                  class="form-control"
+                  placeholder="(71) 9 9999-9999"
+                  required>
+                <div class="form-icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-6 mb-3">
+              <div class="form-group">
+                <label for="servico" class="form-label">Serviço de interesse</label>
+                <select 
+                  id="servico" 
+                  name="servico"
+                  class="form-control"
+                  required>
+                  <option value="">Selecione um serviço</option>
+                  <option value="Instalação de Ar Condicionado">Instalação de Ar Condicionado</option>
+                  <option value="Manutenção">Manutenção</option>
+                  <option value="Limpeza">Limpeza</option>
+                  <option value="Reparo">Reparo</option>
+                  <option value="Outros">Outros</option>
+                </select>
+                <div class="form-icon">
+                  <i class="fas fa-cog"></i>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-12 mb-4">
+              <div class="form-group">
+                <label for="mensagem" class="form-label">Mensagem</label>
+                <textarea 
+                  id="mensagem" 
+                  name="mensagem"
+                  class="form-control"
+                  rows="5" 
+                  placeholder="Descreva seu projeto ou dúvida..."
+                  required></textarea>
+                <div class="form-icon">
+                  <i class="fas fa-comment"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="text-center">
+            <button type="submit" class="btn-submit">
+              <i class="fas fa-paper-plane me-2"></i>
+              Enviar Mensagem
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
-    <div class="mb-3">
-      <input type="email" class="form-control" placeholder="Email" required>
+  </div>
+
+  <!-- Informações de Contato -->
+  <div class="row justify-content-center mt-5">
+    <div class="col-lg-8">
+      <div class="contact-info">
+        <h3 class="info-title">Outras formas de contato</h3>
+        <div class="contact-cards">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div class="contact-details">
+              <h5>Telefones</h5>
+              <p class="contact-item">
+                <i class="fas fa-phone me-2"></i>
+                <a href="tel:+5571988591913">(71) 9 8859-1913</a>
+              </p>
+              <p class="contact-item">
+                <i class="fas fa-phone me-2"></i>
+                <a href="tel:+55713219916">(71) 3219-9164</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fab fa-instagram"></i>
+            </div>
+            <div class="contact-details">
+              <h5>Redes Sociais</h5>
+              <p class="contact-item">
+                <i class="fab fa-instagram me-2"></i>
+                <a href="https://www.instagram.com/wewclimatizacao/" target="_blank">wewclimatizacao</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-details">
+              <h5>Endereço</h5>
+              <p class="contact-item">
+                <i class="fas fa-map-marker-alt me-2"></i>
+                Trade Center Torre Sul<br>
+                Av. Tancredo Neves, 1632<br>
+                Caminho das Árvores, Salvador - BA
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="contact-details">
+              <h5>Horário de Funcionamento</h5>
+              <p class="contact-item">
+                <i class="fas fa-clock me-2"></i>
+                Segunda à Sexta: 8h às 18h<br>
+                Sábado: 8h às 12h
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="mb-3">
-      <input type="tel" class="form-control" placeholder="Telefone" required>
-    </div>
-    <div class="mb-3">
-      <textarea class="form-control" rows="4" placeholder="Mensagem" required></textarea>
-    </div>
-    <button type="submit" class="btn btn-cta">Enviar Mensagem</button>
-  </form>
+  </div>
 </div>
