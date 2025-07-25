@@ -1,25 +1,51 @@
-:root {
-    --cor-primaria: #2e3193;
-    --cor-secundaria: #01aeee;
-    --cor-branco: #ffffff;
-  }
-  
-  body {
-    background-color: var(--cor-branco);
-    color: var(--cor-primaria);
-  }
-  
-  .navbar {
-    background-color: var(--cor-primaria);
-  }
-  
-  .nav-link, .navbar-brand {
-    color: var(--cor-branco) !important;
-  }
-  
-  .btn-personalizado {
-    background-color: var(--cor-secundaria);
-    color: var(--cor-branco);
-    border: none;
-  }
-  
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #2c3e50;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #2980b9, #21618c);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.shadow-custom {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.page-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.3s ease;
+}
