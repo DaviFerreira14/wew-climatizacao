@@ -144,7 +144,6 @@ export class Servicos implements OnInit, OnDestroy {
    * Inicializa o componente
    */
   private initializeComponent(): void {
-    console.log('Componente de Serviços inicializado');
     this.isLoading = false;
   }
 

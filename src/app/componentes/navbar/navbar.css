@@ -9,7 +9,7 @@
   padding: 1rem 0;
   transition: all 0.3s ease;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: var(--cor-branco) !important;
+  background: linear-gradient(135deg, #01aeee 0%, #2e3193 100%) !important;
   position: relative;
 }
 
@@ -41,7 +41,7 @@
 .navbar.scrolled,
 .navbar-scrolled {
   padding: 0.5rem 0;
-  background-color: rgba(255, 255, 255, 0.95) !important;
+  background: linear-gradient(135deg, #01aeee 0%, #2e3193 100%) !important;
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
@@ -52,13 +52,13 @@
   align-items: center;
   font-weight: 700;
   font-size: 1.5rem;
-  color: var(--cor-primaria) !important;
+  color: #fff !important;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .navbar-brand:hover {
-  color: var(--cor-secundaria) !important;
+  color: #fff !important;
   transform: translateY(-2px);
 }
 
@@ -79,8 +79,8 @@
 
 .nav-link {
   font-weight: 500;
-  font-size: 1rem;
-  color: #01aeee !important;
+  font-size: 1.4rem;
+  color: #fff !important;
   padding: 1rem 1.5rem !important;
   border-radius: 25px;
   transition: all 0.3s ease;
@@ -90,37 +90,29 @@
 }
 
 .nav-link::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
-  transition: all 0.3s ease;
-  transform: translateX(-50%);
+  display: none;
 }
 
 /* Efeito mais forte nos botões do navbar */
 .nav-link:hover {
-  color: #01aeee !important;
-  background: linear-gradient(135deg, var(--cor-secundaria), var(--cor-primaria));
-  box-shadow: 0 0 25px 8px rgba(1, 174, 238, 0.25), 0 6px 20px rgba(0, 187, 255, 0.35);
-  transform: translateY(-4px) scale(1.08);
-  font-weight: 600;
+  color: #fff !important;
+  background: transparent;
+  transform: translateY(-3px);
+  font-weight: 500;
+  transition: transform 0.3s ease;
 }
 
 .nav-link:hover::before {
-  width: 100%;
-  height: 4px;
+  display: none;
 }
 
 .nav-link.active {
-  color: #01aeee !important;
-  background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
-  box-shadow: 0 0 25px 10px rgba(46, 49, 147, 0.2), 0 6px 20px rgba(1, 174, 238, 0.3);
-  transform: translateY(-2px) scale(1.05);
-  font-weight: 600;
+  color: #fff !important;
+  background: transparent;
+  transform: none;
+  font-weight: 500;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 2px;
 }
 
 .nav-link.active::before {
@@ -130,7 +122,7 @@
 .nav-link i {
   font-size: 0.9rem;
   opacity: 0.8;
-  color: #01aeee;
+  color: #fff;
 }
 
 /* Mobile Styles */
@@ -181,7 +173,7 @@
 }
 
 .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2846, 49, 147, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 /* Animations */
