@@ -1,9 +1,37 @@
 <footer class="footer">
   <div class="footer-content">
-    <img src="/logo-wew.png" alt="Logo W&W" class="footer-logo">
-    <div class="footer-text">
-      <span>&copy; {{ currentyear }} W&W Climatização. Todos os direitos reservados.</span>
-      <span class="footer-dev">Desenvolvido por <b>Davi Ferreira</b>.</span>
+    <!-- Coluna da esquerda - Contatos -->
+    <div class="footer-left">
+      <div class="footer-contacts">
+        <div class="contact-item">
+          <i class="fas fa-phone"></i>
+          <span class="contact-text">(71) 98859-1913</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-phone"></i>
+          <span class="contact-text">(71) 3219-9164</span>
+        </div>
+        <div class="contact-item">
+          <i class="fab fa-instagram"></i>
+          <span class="contact-text">&#64;wwclimatizacao</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Coluna do centro - Logo e Desenvolvedor -->
+    <div class="footer-center">
+      <img src="/logo-wew.png" alt="Logo W&W" class="footer-logo">
+      <div class="footer-dev">Desenvolvido por <b>Davi Ferreira</b>.</div>
+    </div>
+
+    <!-- Coluna da direita - Sobre e Copyright -->
+    <div class="footer-right">
+      <div class="footer-links">
+        <a routerLink="/sobre" class="footer-link">Sobre Nós</a>
+      </div>
+      <div class="footer-copyright">
+        &copy; {{ currentyear }} W&W Climatização. Todos os direitos reservados.
+      </div>
     </div>
   </div>
 </footer>
