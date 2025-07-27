@@ -19,24 +19,11 @@
         <h2 class="section-title">Fale conosco</h2>
         <p class="section-subtitle">Entre em contato e solicite seu orçamento sem compromisso</p>
         
-        <!-- Formulário com Formspree -->
+        <!-- Formulário Atualizado -->
         <form 
-          action="https://formspree.io/f/xqkqyqyq" 
-          method="POST" 
           class="contact-form"
-          id="contactForm">
-          
-          <!-- Email de destino (oculto) -->
-          <input type="hidden" name="_to" value="davi073ferreira@gmail.com">
-          
-          <!-- Configurações do Formspree -->
-          <input type="hidden" name="_subject" value="Nova mensagem do site W&W Climatização">
-          <input type="hidden" name="_next" value="https://seusite.com/obrigado">
-          <input type="hidden" name="_language" value="pt">
-          
-          <!-- Proteção contra spam -->
-          <input type="hidden" name="_captcha" value="false">
-          <input type="text" name="_gotcha" style="display:none">
+          (ngSubmit)="onSubmit($event)"
+          #contactForm="ngForm">
           
           <div class="row">
             <div class="col-md-6 mb-3">
@@ -46,6 +33,7 @@
                   type="text" 
                   id="nome" 
                   name="nome"
+                  [(ngModel)]="formData.nome"
                   class="form-control"
                   placeholder="Digite seu nome"
                   required>
@@ -62,6 +50,7 @@
                   type="email" 
                   id="email" 
                   name="email"
+                  [(ngModel)]="formData.email"
                   class="form-control"
                   placeholder="Digite seu e-mail"
                   required>
@@ -78,6 +67,7 @@
                   type="tel" 
                   id="telefone" 
                   name="telefone"
+                  [(ngModel)]="formData.telefone"
                   class="form-control"
                   placeholder="(71) 9 9999-9999"
                   required>
@@ -93,6 +83,7 @@
                 <select 
                   id="servico" 
                   name="servico"
+                  [(ngModel)]="formData.servico"
                   class="form-control"
                   required>
                   <option value="">Selecione um serviço</option>
@@ -114,6 +105,7 @@
                 <textarea 
                   id="mensagem" 
                   name="mensagem"
+                  [(ngModel)]="formData.mensagem"
                   class="form-control"
                   rows="5" 
                   placeholder="Descreva seu projeto ou dúvida..."
@@ -126,9 +118,10 @@
           </div>
           
           <div class="text-center">
-            <button type="submit" class="btn-submit">
-              <i class="fas fa-paper-plane me-2"></i>
-              Enviar Mensagem
+            <button type="submit" class="btn-submit" [disabled]="isSubmitting">
+              <i class="fas fa-paper-plane me-2" *ngIf="!isSubmitting"></i>
+              <i class="fas fa-spinner fa-spin me-2" *ngIf="isSubmitting"></i>
+              {{ isSubmitting ? 'Enviando...' : 'Enviar Mensagem' }}
             </button>
           </div>
         </form>
@@ -201,6 +194,29 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de Feedback -->
+<div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header" [ngClass]="modalType === 'success' ? 'modal-header-success' : 'modal-header-error'">
+        <h5 class="modal-title" id="feedbackModalLabel">
+          <i class="fas" [ngClass]="modalType === 'success' ? 'fa-check-circle' : 'fa-exclamation-triangle'"></i>
+          {{ modalTitle }}
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <p>{{ modalMessage }}</p>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+          {{ modalType === 'success' ? 'Fechar' : 'Tentar Novamente' }}
+        </button>
       </div>
     </div>
   </div>
